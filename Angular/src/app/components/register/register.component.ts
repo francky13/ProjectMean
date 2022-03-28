@@ -13,6 +13,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.actualiter();
   }
+
   actualiter(){
     this.info.getinfo().subscribe(
     (res) => {
