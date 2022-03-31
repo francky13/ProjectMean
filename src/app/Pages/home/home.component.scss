@@ -1,0 +1,35 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  color: aqua;
+  margin-left: 50px;
+}
+
+.example-full-width {
+  width: 100%;
+
+}
+.tile-image {
+  width:100%;
+  height: auto;
+}
+.photo{
+  background-image: url("../../../assets/image/fond1.jpg");
+
+}
+
+
+
+.example-button-row {
+  display: table-cell;
+  margin-left: 50px;
+  width: 120px;
+  size: 50px;
+}
+
+.example-button-row .mat-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+

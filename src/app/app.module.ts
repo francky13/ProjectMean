@@ -10,12 +10,22 @@ import { AngularMaterialModule } from './angular-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { HomeComponent } from './Pages/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavbarComponent,
+    SidenavComponent,
+    HomeComponent,
+    FooterComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

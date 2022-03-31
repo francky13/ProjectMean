@@ -1,9 +1,18 @@
 
-<mat-toolbar color="primary" class="app-header">
-  <div><a href="#" target="_blank" class="positronx">Demo</a></div>
-  <span class="nav-tool-items">
-    <a mat-button routerLink="signin" routerLinkActive="active">Signin</a>
-    <a mat-button mat-raised-button routerLink="register" routerLinkActive="active">Signup</a>
-  </span>
-</mat-toolbar>
-<router-outlet></router-outlet>
+<app-layout>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <!--this is a place for us to add side-nav code-->
+        <app-sidenav (sidenavClose)="sidenav.close()"></app-sidenav>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-navbar (sidenavToggle)="sidenav.toggle()"></app-navbar>
+      <!--in here all the content must reside. We will add a navigation header as well-->
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</app-layout>
+<app-footer></app-footer>

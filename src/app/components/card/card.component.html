@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+  <a routerLink="{{routerLink}}">
+  <img height="250px" width="100px" mat-card-image src={{url}} ></a>
+  <mat-card-content>
+    <h2>
+      {{Text}}
+    </h2>
+  </mat-card-content>
+  <mat-card-actions>
+    <div fxFlex fxLayout fxLayoutAlign="centre"  fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <li>
+          <h3><a routerLink="{{routerLink}}">{{texteLink}}</a></h3></li></ul>
+    </div>
+  </mat-card-actions>
+</mat-card>

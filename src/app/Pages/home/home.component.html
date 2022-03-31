@@ -1,0 +1,54 @@
+<mat-grid-list cols="4" rowHeight="100px" class="photo">
+  <mat-grid-tile
+  [colspan]="4"
+  [rowspan]="1"
+  >
+  <h1 style="font-size: xx-large;" >Faite livrer votre plat facilement avec E-Kaly </h1>
+</mat-grid-tile>
+  <mat-grid-tile
+      [colspan]="4"
+      [rowspan]="2"
+      >
+
+      <div fxFlex fxLayout fxLayoutAlign="flex-start" fxHide.xs>
+        <form class="example-form">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Ville</mat-label>
+            <input type="text"
+                   placeholder="Saisissez ville de livraison"
+                   aria-label="Restaurant"
+                   matInput
+                   [formControl]="myControl"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+
+        <div class="example-button-row">
+          <button style="background-color:rgb(255, 255, 255);" mat-raised-button >RECHERCHER </button>
+        </div>
+      </div>
+
+  </mat-grid-tile>
+
+</mat-grid-list>
+<div>
+<mat-grid-list  cols="3" rowHeight="100px">
+  <mat-grid-tile
+  *ngFor="let tile of tiles"
+  [colspan]="tile.cols"
+  [rowspan]="tile.rows"
+  >
+  <app-card
+  [url]="tile.url"
+  [Text] ="tile.Text"
+  [routerLink]  ="tile.routerLink"
+  [texteLink] ="tile.texteLink"
+  ></app-card></mat-grid-tile>
+
+</mat-grid-list>
+</div>
