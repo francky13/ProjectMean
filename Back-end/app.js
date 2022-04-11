@@ -4,6 +4,11 @@ const mangose = require('mongoose');
 let cors = require('cors');
 const { default: mongoose } = require('mongoose');
 var UtilisateurRoute = require('./routes/UtilisateurRoute');
+var ClientRoute = require('./routes/ClientRoute');
+var CategoryRoute = require('./routes/CategoryRoute');
+var RestaurantRoute = require('./routes/RestaurantRoute');
+
+
 const path = require('path')
 
 //Gestion Cors
@@ -25,6 +30,12 @@ mongoose.connect('mongodb+srv://user:user12345678@mangodb.unp9t.mongodb.net/myFi
 });
 
 app.use('/api/Utilisateur', UtilisateurRoute);
+app.use('/api/Client', ClientRoute);
+app.use('/api/Categorie', CategoryRoute);
+app.use('/api/Restaurant', RestaurantRoute);
+
+
+
 
 app.use(express.static('dist/project-angular'));
 

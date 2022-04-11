@@ -1,5 +1,20 @@
+<mat-toolbar  color="white">
+  <div >
+    Welcome to E-kaly  for Client
+</div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+  <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+      <li>
+          <a routerLink="/signin">Connexion</a>
+      </li>
+      <li>
+          <a   routerLink="/register">Inscription</a>
+      </li>
+  </ul>
+</div> </mat-toolbar>
+
 <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
-  <mat-card class="box">
+  <mat-card class="boxRegister">
     <mat-card-header>
       <mat-card-title>Register</mat-card-title>
     </mat-card-header>
@@ -16,9 +31,16 @@
         </mat-form-field>
 
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Password">
+          <input matInput placeholder="Adresse">
         </mat-form-field>
-
+        <table class="example-full-width" cellspacing="0"><tr>
+          <td><mat-form-field class="example-full-width" >
+            <input matInput placeholder="Password">
+          </mat-form-field></td>
+          <td><mat-form-field class="example-full-width" >
+            <input matInput placeholder=" Confirme Password">
+          </mat-form-field></td>
+        </tr></table>
         <mat-form-field class="example-full-width">
           <mat-label>Choose designation</mat-label>
           <mat-select>
@@ -30,7 +52,7 @@
 
       </mat-card-content>
 
-      <button mat-stroked-button color="accent" class="btn-block">Register</button>
+      <button mat-stroked-button color="black" class="btn-block">Register</button>
 
     </form>
   </mat-card>

@@ -15,6 +15,9 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { HomeComponent } from './Pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
+import { RegisterRestaurantComponent } from './components/register-restaurant/register-restaurant.component';
+import { ListPlatComponent } from './components/list-plat/list-plat.component';
+import { PlatComponent } from './Pages/plat/plat.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { CardComponent } from './components/card/card.component';
     SidenavComponent,
     HomeComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    RegisterRestaurantComponent,
+    ListPlatComponent,
+    PlatComponent
   ],
   imports: [
     BrowserModule,

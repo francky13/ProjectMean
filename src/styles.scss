@@ -28,7 +28,7 @@ body {
 
 .positronx {
 	text-decoration: none;
-	color: #080000;
+	color: #ffffff;
 }
 
 .box {
@@ -107,3 +107,11 @@ body {
 .main-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
 	padding: 0.8375em 0;
 }
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

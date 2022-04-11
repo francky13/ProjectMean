@@ -1,3 +1,14 @@
+<app-layout>
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav role="navigation">
+      <!--this is a place for us to add side-nav code-->
+        <app-sidenav (sidenavClose)="sidenav.close()"></app-sidenav>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-navbar (sidenavToggle)="sidenav.toggle()"></app-navbar>
+      <!--in here all the content must reside. We will add a navigation header as well-->
+      <main>
 <mat-grid-list cols="4" rowHeight="100px" class="photo">
   <mat-grid-tile
   [colspan]="4"
@@ -18,6 +29,7 @@
                    placeholder="Saisissez ville de livraison"
                    aria-label="Restaurant"
                    matInput
+                   appearance="fill"
                    [formControl]="myControl"
                    [matAutocomplete]="auto">
             <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
@@ -52,3 +64,8 @@
 
 </mat-grid-list>
 </div>
+</main>
+</mat-sidenav-content>
+</mat-sidenav-container>
+</app-layout>
+<app-footer></app-footer>
